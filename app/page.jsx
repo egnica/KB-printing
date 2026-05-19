@@ -11,8 +11,8 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <NavBar companyName={company_name}/>
-      
+      <NavBar companyName={company_name} />
+
       <section className={styles.hero}>
         <video
           className={styles.heroVideo}
@@ -74,19 +74,29 @@ export default function Home() {
       </section>
 
       <section className={styles.introSection}>
-        <div className={styles.container}>
-          <p className={styles.eyebrow}>
-            {yearsOnJob} Years of Hands-On Experience
-          </p>
+        <div className={`${styles.container} ${styles.introGrid}`}>
+          <div className={styles.introContent}>
+            <p className={styles.eyebrow}>
+              {yearsOnJob} Years of Hands-On Experience
+            </p>
 
-          <h2>Practical help from someone who knows the machines.</h2>
+            <h2>Practical help from someone who knows the machines.</h2>
 
-          <p>
-            Kenny Behling has spent {yearsOnJob} years working with folder
-            machines, bindery equipment, and print finishing systems from nearly
-            every angle, including supervision, maintenance, parts, sales,
-            machine setup, customer training, and field service.
-          </p>
+            <p>
+              Kenny Behling has spent {yearsOnJob} years working with folder
+              machines, bindery equipment, and print finishing systems from
+              nearly every angle, including supervision, maintenance, parts,
+              sales, machine setup, customer training, and field service.
+            </p>
+          </div>
+
+          <div className={styles.introImageWrap}>
+            <img
+              src="https://nciholasegner.s3.us-east-2.amazonaws.com/KB-Folding/images/IMG_1705.webp"
+              alt="Kenny Behling working with folder machine equipment"
+              className={styles.introImage}
+            />
+          </div>
         </div>
       </section>
 
@@ -140,11 +150,17 @@ export default function Home() {
       </section>
 
       <section className={styles.whySection}>
+        <p className={styles.eyebrow}>Why Call Kenny?</p>
+        <h2>When the machine is down, experience matters.</h2>
+        <br />
         <div className={styles.container}>
           <div className={styles.splitLayout}>
-            <div>
-              <p className={styles.eyebrow}>Why Call Kenny?</p>
-              <h2>When the machine is down, experience matters.</h2>
+            <div className={styles.splitLayer}>
+              <img
+                className={styles.introImageWrap}
+                src="https://nciholasegner.s3.us-east-2.amazonaws.com/KB-Folding/images/IMG_1709.webp"
+                alt="Folder machine maintance"
+              />
             </div>
 
             <div className={styles.bulletList}>
@@ -174,6 +190,19 @@ export default function Home() {
             glue systems, paper cutters, stitchers, glue systems, and
             deliveries.
           </p>
+        </div>
+        <br />
+        <div className={styles.splitPics}>
+          <img
+            className={styles.introImageWrap}
+            src="https://nciholasegner.s3.us-east-2.amazonaws.com/KB-Folding/images/IMG_3555+4C.webp"
+            alt="Folder machine 1"
+          />
+          <img
+            className={styles.introImageWrap}
+            src="https://nciholasegner.s3.us-east-2.amazonaws.com/KB-Folding/images/PRE-Belt%232+0225.webp"
+            alt="Folder machine 2"
+          />
         </div>
       </section>
 
