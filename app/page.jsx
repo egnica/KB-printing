@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import NavBar from "./components/navBar";
 export default function Home() {
-  let company_name = "KB Folding Solutions";
+  let company_name = "KB Folding Services";
 
   const todayYear = new Date().getFullYear();
   const startYear = 1980;
@@ -23,7 +23,7 @@ export default function Home() {
           preload="metadata"
         >
           <source
-            src="https://nciholasegner.s3.us-east-2.amazonaws.com/KB-Folding/videos/printing_hero_loop.mp4"
+            src="https://nciholasegner.s3.us-east-2.amazonaws.com/KB-Folding/videos/printing1_4.mp4"
             type="video/mp4"
           />
         </video>
