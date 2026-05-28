@@ -1,0 +1,430 @@
+.main {
+  min-height: 100vh;
+  background: #f6f1e8;
+  color: #191714;
+}
+
+.container {
+  width: min(1120px, calc(100% - 3rem));
+  margin: 0 auto;
+}
+
+.eyebrow,
+.cardLabel {
+  margin: 0 0 0.75rem;
+  color: #9b6b25;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+
+/* Hero */
+
+.servicesHero {
+  padding: 9.5rem 1.5rem 5rem;
+  background: #e5d2ad;
+  color: #191714;
+}
+.servicesHero .container {
+  max-width: 980px;
+}
+
+.servicesHero h1 {
+  max-width: 940px;
+  margin: 0;
+  font-size: clamp(2.7rem, 5.8vw, 5.25rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+  font-weight: 850;
+}
+
+.heroText {
+  max-width: 760px;
+  margin: 1.4rem 0 0;
+  color: #504a40;
+  font-size: clamp(1.06rem, 1.5vw, 1.24rem);
+  line-height: 1.75;
+  font-weight: 500;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0.82rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    background 160ms ease,
+    border-color 160ms ease;
+}
+
+.primaryButton {
+  background: #d6a85f;
+  color: #111;
+}
+
+.secondaryButton {
+  color: #191714;
+  background: transparent;
+  border: 1px solid rgba(25, 23, 20, 0.35);
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform: translateY(-2px);
+}
+
+.primaryButton:hover {
+  background: #e2b66d;
+}
+
+/* Shared sections */
+
+.introSection,
+.servicesSection,
+.problemSection,
+.equipmentSection,
+.whySection,
+.finalCta {
+  padding: 5.25rem 1.5rem;
+}
+
+.introSection {
+  background: #f6f1e8;
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.introGrid h2,
+.sectionHeader h2,
+.whySection h2,
+.finalCta h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  line-height: 1.07;
+  letter-spacing: -0.04em;
+}
+
+.introGrid p:not(.eyebrow),
+.sectionHeader p,
+.whySection p,
+.finalCta p {
+  color: #504a40;
+  font-size: 1.06rem;
+  line-height: 1.75;
+}
+
+.introGrid p:not(.eyebrow) {
+  margin: 0 0 1.15rem;
+}
+
+.sectionHeader {
+  max-width: 820px;
+  margin-bottom: 2.25rem;
+}
+
+.sectionHeader p {
+  margin: 1.1rem 0 0;
+}
+
+/* Services flip cards */
+
+.servicesSection {
+  background: #efe7d9;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+}
+
+.serviceFlipCard {
+  display: block;
+  min-height: 330px;
+  color: inherit;
+  text-decoration: none;
+  perspective: 1200px;
+}
+
+.serviceFlipInner {
+  position: relative;
+  min-height: 330px;
+  height: 100%;
+  transition: transform 650ms ease;
+  transform-style: preserve-3d;
+}
+
+.serviceFlipCard:hover .serviceFlipInner,
+.serviceFlipCard:focus-visible .serviceFlipInner {
+  transform: rotateY(180deg);
+}
+
+.serviceFace,
+.serviceBack {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.45rem;
+  border-radius: 18px;
+  backface-visibility: hidden;
+  background: #fffaf0;
+  box-shadow: 0 10px 26px rgba(60, 45, 24, 0.12);
+}
+
+.serviceFace {
+  border-top: 5px solid #d6a85f;
+}
+
+.serviceBack {
+  transform: rotateY(180deg);
+  background: #26231d;
+  color: #fffaf0;
+}
+
+.serviceFace h3,
+.serviceBack h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1.35rem;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.serviceFace p {
+  margin: 0;
+  color: #5a5144;
+  line-height: 1.65;
+}
+
+.serviceBack .cardLabel {
+  color: #d6a85f;
+}
+
+.serviceBack ul {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding-left: 1.1rem;
+  color: rgba(255, 250, 240, 0.82);
+  line-height: 1.1;
+}
+
+.serviceFace span,
+.serviceBack span {
+  margin-top: 1.2rem;
+  color: #8a5e1f;
+  font-weight: 850;
+}
+
+.serviceBack span {
+  color: #d6a85f;
+}
+
+/* Problem section, less blocky */
+
+.problemSection {
+  background: #f6f1e8;
+}
+
+.problemGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 3rem;
+  border-top: 1px solid rgba(25, 23, 20, 0.18);
+}
+
+.problemItem {
+  padding: 1rem 0;
+  color: #29251f;
+  line-height: 1.5;
+  font-weight: 720;
+  border-bottom: 1px solid rgba(25, 23, 20, 0.14);
+}
+
+/* Equipment, more natural list */
+
+.equipmentSection {
+  background: #faf7f0;
+}
+
+.logoList,
+.equipmentList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.65rem;
+  max-width: 900px;
+}
+
+.logoList {
+  margin-bottom: 1.25rem;
+}
+
+.logoList span,
+.equipmentList span {
+  color: #29251f;
+  font-weight: 800;
+}
+
+.logoList span:not(:last-child)::after,
+.equipmentList span:not(:last-child)::after {
+  content: ",";
+  color: #9b6b25;
+}
+
+/* Why section, not boxed */
+
+.whySection {
+  background: #f6f1e8;
+}
+
+.splitLayout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 3.25rem;
+  align-items: start;
+}
+
+.bulletList {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid rgba(25, 23, 20, 0.18);
+}
+
+.bulletList p {
+  margin: 0;
+  padding: 1rem 0;
+  color: #39342c;
+  line-height: 1.6;
+  font-size: 1.08rem;
+  border-bottom: 1px solid rgba(25, 23, 20, 0.14);
+}
+
+/* Final CTA */
+
+.finalCta {
+  background: #e5d2ad;
+  padding-bottom: 6rem;
+}
+
+.finalCta .container {
+  max-width: 980px;
+}
+
+.finalCta p {
+  max-width: 760px;
+  margin: 1.25rem 0 1.8rem;
+}
+
+/* Responsive */
+
+@media (max-width: 980px) {
+  .serviceGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .introGrid,
+  .splitLayout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .problemGrid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .container {
+    width: min(100% - 2rem, 1120px);
+  }
+
+  .servicesHero {
+    padding: 8rem 1rem 4rem;
+  }
+
+  .introSection,
+  .servicesSection,
+  .problemSection,
+  .equipmentSection,
+  .whySection,
+  .finalCta {
+    padding: 4rem 1rem;
+  }
+
+  .servicesHero h1 {
+    font-size: clamp(2.45rem, 11vw, 3.8rem);
+  }
+
+  .heroActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .serviceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceFlipCard,
+  .serviceFlipInner {
+    min-height: auto;
+  }
+
+  .serviceFlipInner {
+    transform: none !important;
+  }
+
+  .serviceFace,
+  .serviceBack {
+    position: relative;
+    inset: auto;
+    min-height: auto;
+    backface-visibility: visible;
+    transform: none;
+  }
+
+  .serviceBack {
+    margin-top: 0;
+    border-radius: 0 0 18px 18px;
+  }
+
+  .serviceFace {
+    border-radius: 18px 18px 0 0;
+  }
+
+  .serviceFace span {
+    display: none;
+  }
+
+  .serviceBack span {
+    margin-top: 1rem;
+  }
+}

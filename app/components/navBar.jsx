@@ -14,12 +14,13 @@ export default function Navbar({ companyName }) {
       </Link>
 
       <div className={styles.desktopLinks}>
-        <a href="#services">Services</a>
-        <a href="#repair">Repair</a>
-        <a href="../about">About</a>
-        <a href="#contact" className={styles.cta}>
+        <Link href="/">Home</Link>
+        <Link href="services">Services</Link>
+        <Link href="#repair">Repair</Link>
+        <Link href="../about">About</Link>
+        <Link href="#contact" className={styles.cta}>
           Contact Now
-        </a>
+        </Link>
       </div>
 
       <button
