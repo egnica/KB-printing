@@ -110,37 +110,42 @@ export default function Home() {
           </div>
 
           <div className={styles.cardGrid}>
-            <article className={styles.card}>
-              <h3>Folder Machine Repair</h3>
-              <p>
-                Troubleshooting and repair for folder machines, older equipment,
-                machine issues, and down production lines.
-              </p>
-            </article>
-
-            <article className={styles.card}>
-              <h3>Preventive Maintenance</h3>
-              <p>
-                Ongoing machine care to help reduce downtime, catch issues
-                earlier, and keep equipment running properly.
-              </p>
-            </article>
-
-            <article className={styles.card}>
-              <h3>Operator Training</h3>
-              <p>
-                Practical training and guidance for operators who need to better
-                understand setup, use, and common machine problems.
-              </p>
-            </article>
-
-            <article className={styles.card}>
-              <h3>Parts Support</h3>
-              <p>
-                Help identifying, sourcing, recommending, and selling parts for
-                folding and bindery equipment.
-              </p>
-            </article>
+            <Link href="https://main.dtgywjueb646q.amplifyapp.com/services/folder-machine-repair">
+              <article className={styles.card}>
+                <h3>Folder Machine Repair</h3>
+                <p>
+                  Troubleshooting and repair for folder machines, older
+                  equipment, machine issues, and down production lines.
+                </p>
+              </article>
+            </Link>
+            <Link href="https://main.dtgywjueb646q.amplifyapp.com/services/preventive-maintenance">
+              <article className={styles.card}>
+                <h3>Preventive Maintenance</h3>
+                <p>
+                  Ongoing machine care to help reduce downtime, catch issues
+                  earlier, and keep equipment running properly.
+                </p>
+              </article>
+            </Link>
+            <Link href="https://main.dtgywjueb646q.amplifyapp.com/services/folder-machine-training">
+              <article className={styles.card}>
+                <h3>Operator Training</h3>
+                <p>
+                  Practical training and guidance for operators who need to
+                  better understand setup, use, and common machine problems.
+                </p>
+              </article>
+            </Link>
+            <Link href="https://main.dtgywjueb646q.amplifyapp.com/services/parts-support">
+              <article className={styles.card}>
+                <h3>Parts Support</h3>
+                <p>
+                  Help identifying, sourcing, recommending, and selling parts
+                  for folding and bindery equipment.
+                </p>
+              </article>
+            </Link>
           </div>
 
           <a href="/services" className={styles.textLink}>
