@@ -207,13 +207,16 @@
 .heroInner {
   position: relative;
   z-index: 2;
-  width: min(1200px, calc(100% - 40px));
+  width: min(1200px, calc(100% - 0px));
   margin: 0 auto;
-  padding: 5rem 0;
+  backdrop-filter: blur(8px);
+  padding: 2rem 0;
   display: grid;
   grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.25fr);
   align-items: center;
   gap: clamp(2rem, 2vw, 4.5rem);
+  border-radius: 20px;
+  background-color: #08080852;
 }
 
 /* Kenny image */
