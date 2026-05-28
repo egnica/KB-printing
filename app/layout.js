@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "KB Folding Solutions",
-  description: "KB Folding Solutions",
+  title: "KB Folding Services",
+  description: "KB Folding Services",
 };
 
 export default function RootLayout({ children }) {
