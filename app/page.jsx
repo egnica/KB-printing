@@ -66,7 +66,7 @@ export default function Home() {
               </a>
 
               <a href="/services" className={styles.secondaryButton}>
-                View Services
+                Services Section
               </a>
             </div>
           </div>
