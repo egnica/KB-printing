@@ -19,7 +19,6 @@
   text-transform: uppercase;
 }
 
-
 /* Hero */
 
 .servicesHero {
@@ -104,7 +103,16 @@
 }
 
 .introSection {
-  background: #f6f1e8;
+  background: #362f24;
+  color: rgb(250, 206, 126);
+}
+
+.secondSection p {
+  color: wheat;
+}
+
+.introSection p {
+  color: rgb(255, 244, 221);
 }
 
 .introGrid {
@@ -128,7 +136,6 @@
 .sectionHeader p,
 .whySection p,
 .finalCta p {
-  color: #504a40;
   font-size: 1.06rem;
   line-height: 1.75;
 }

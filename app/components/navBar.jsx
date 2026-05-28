@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import styles from "../page.module.css";
 import Link from "next/link";
+import styles from "../page.module.css";
+import { services } from "../lib/services";
 
 export default function Navbar({ companyName }) {
   const [open, setOpen] = useState(false);
@@ -15,10 +16,30 @@ export default function Navbar({ companyName }) {
 
       <div className={styles.desktopLinks}>
         <Link href="/">Home</Link>
-        <Link href="services">Services</Link>
-        <Link href="#repair">Repair</Link>
-        <Link href="../about">About</Link>
-        <Link href="#contact" className={styles.cta}>
+
+        <div className={styles.navDropdown}>
+          <Link href="/services" className={styles.navDropdownTrigger}>
+            Services
+          </Link>
+
+          <div className={styles.navDropdownMenu}>
+            <div className={styles.navDropdownPanel}>
+              {services.map((service) => (
+                <Link
+                  key={service.slug}
+                  href={`/services/${service.slug}`}
+                  className={styles.navDropdownLink}
+                >
+                  {service.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <Link href="/about">About</Link>
+
+        <Link href="/contact" className={styles.cta}>
           Contact Now
         </Link>
       </div>
@@ -34,22 +55,37 @@ export default function Navbar({ companyName }) {
 
       {open && (
         <div className={styles.mobileMenu}>
-          <a href="#services" onClick={() => setOpen(false)}>
+          <Link href="/" onClick={() => setOpen(false)}>
+            Home
+          </Link>
+
+          <Link href="/services" onClick={() => setOpen(false)}>
             Services
-          </a>
-          <a href="#repair" onClick={() => setOpen(false)}>
-            Repair
-          </a>
-          <a href="#about" onClick={() => setOpen(false)}>
+          </Link>
+
+          <div className={styles.mobileServiceLinks}>
+            {services.map((service) => (
+              <Link
+                key={service.slug}
+                href={`/services/${service.slug}`}
+                onClick={() => setOpen(false)}
+              >
+                {service.title}
+              </Link>
+            ))}
+          </div>
+
+          <Link href="/about" onClick={() => setOpen(false)}>
             About
-          </a>
-          <a
-            href="#contact"
+          </Link>
+
+          <Link
+            href="/contact"
             className={styles.mobileCta}
             onClick={() => setOpen(false)}
           >
             Contact Now
-          </a>
+          </Link>
         </div>
       )}
     </nav>

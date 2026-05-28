@@ -189,7 +189,7 @@ export default function ServicesPage() {
               <h2>Practical help from someone who knows the machines.</h2>
             </div>
 
-            <div>
+            <div className={styles.secondSection}>
               <p>
                 Kenny Behling has worked with folder machines, bindery
                 equipment, and print finishing systems from nearly every angle,
