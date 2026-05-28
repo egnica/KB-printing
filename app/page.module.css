@@ -216,7 +216,7 @@
   align-items: center;
   gap: clamp(2rem, 2vw, 4.5rem);
   border-radius: 20px;
-  background-color: #08080852;
+  background: rgba(0, 0, 0, 0.575);
 }
 
 /* Kenny image */
