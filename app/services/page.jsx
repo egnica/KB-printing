@@ -150,7 +150,15 @@ export default function ServicesPage() {
           __html: JSON.stringify(jsonLd),
         }}
       />
-      <Nav />
+      <div
+        style={{
+          position: "relative",
+          background: "#362f24",
+          height: "100px",
+        }}
+      >
+        <Nav />
+      </div>
       <section className={styles.servicesHero}>
         <div className={styles.container}>
           <p className={styles.eyebrow}>Folder Machine Service</p>

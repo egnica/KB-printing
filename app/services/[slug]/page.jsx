@@ -223,7 +223,15 @@ export default async function ServiceDetailPage({ params }) {
       />
 
       <main className={styles.page}>
-        <Nav />
+        <div
+          style={{
+            position: "relative",
+            background: "#362f24",
+            height: "100px",
+          }}
+        >
+          <Nav />
+        </div>
         <section className={styles.hero}>
           <div className={styles.container}>
             <Link href="/services" className={styles.backLink}>
