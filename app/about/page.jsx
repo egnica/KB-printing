@@ -1,17 +1,135 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./aboutPage.module.css";
+import ContactForm from "../components/ContactForm/ContactForm";
 import { businessInfo, getFeaturedServices } from "../lib/services";
 import Nav from "../components/navBar";
 
 const kennyImage =
   "https://nciholasegner.s3.us-east-2.amazonaws.com/KB-Folding/images/kenny-neg.webp";
 
+export const metadata = {
+  title: `About ${businessInfo.name} | Folder Machine Repair & Bindery Support`,
+  description: `${businessInfo.name} is led by ${businessInfo.founderName}, who brings more than ${businessInfo.experienceYears} years of hands-on experience with folder machines, bindery equipment, print finishing systems, repair, troubleshooting, training, maintenance, and parts support.`,
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: `About ${businessInfo.name}`,
+    description: `${businessInfo.name} provides folder machine repair, troubleshooting, training, maintenance, parts support, and bindery equipment service for print shops, binderies, mail houses, and production teams.`,
+    url: `${businessInfo.url}/about`,
+    siteName: businessInfo.name,
+    type: "website",
+    images: [
+      {
+        url: kennyImage,
+        width: 1200,
+        height: 1500,
+        alt: `${businessInfo.founderName}, founder of ${businessInfo.name}`,
+      },
+    ],
+  },
+};
+
 export default function AboutPage() {
   const featuredServices = getFeaturedServices();
 
+  const aboutJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": `${businessInfo.url}/about#aboutpage`,
+        name: `About ${businessInfo.name}`,
+        url: `${businessInfo.url}/about`,
+        description: metadata.description,
+        isPartOf: {
+          "@type": "WebSite",
+          name: businessInfo.name,
+          url: businessInfo.url,
+        },
+        mainEntity: {
+          "@id": `${businessInfo.url}#business`,
+        },
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": `${businessInfo.url}#business`,
+        name: businessInfo.name,
+        legalName: businessInfo.legalName,
+        url: businessInfo.url,
+        description: businessInfo.description,
+        telephone: businessInfo.phone,
+        email: businessInfo.email,
+        image: kennyImage,
+        founder: {
+          "@type": "Person",
+          name: businessInfo.founderName,
+          jobTitle: "Founder",
+        },
+        areaServed: {
+          "@type": "Country",
+          name: businessInfo.serviceArea,
+        },
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: businessInfo.baseLocation,
+        },
+        knowsAbout: [
+          "Folder machine repair",
+          "Folder machine troubleshooting",
+          "Folder machine training",
+          "Preventive maintenance",
+          "Bindery equipment service",
+          "Print finishing equipment",
+          "Folder machine parts",
+          "Baumer hhs glue systems",
+          "Wet scoring",
+        ],
+        brand: businessInfo.brands.map((brand) => ({
+          "@type": "Brand",
+          name: brand,
+        })),
+        makesOffer: featuredServices.map((service) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: service.title,
+            serviceType: service.serviceType,
+            description: service.summary,
+            url: `${businessInfo.url}/services/${service.slug}`,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${businessInfo.url}/about#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: businessInfo.url,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "About",
+            item: `${businessInfo.url}/about`,
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <main className={styles.main}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aboutJsonLd),
+        }}
+      />
       <div
         style={{
           position: "relative",

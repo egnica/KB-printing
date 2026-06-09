@@ -14,6 +14,23 @@ export const metadata = {
   alternates: {
     canonical: "/services",
   },
+  openGraph: {
+    title:
+      "Folder Machine Repair, Maintenance, Training, and Bindery Equipment Service | KB Folding Services",
+    description:
+      "KB Folding Services provides folder machine repair, troubleshooting, preventive maintenance, operator training, parts support, glue system support, wet scoring, and bindery equipment service.",
+    url: pageUrl,
+    siteName: businessInfo.name,
+    type: "website",
+    images: [
+      {
+        url: `${businessInfo.url}/opengraph-image`,
+        width: 1200,
+        height: 630,
+        alt: "KB Folding Services - Folder Machine Repair and Bindery Equipment Support",
+      },
+    ],
+  },
 };
 
 const commonProblems = [
@@ -169,7 +186,7 @@ export default function ServicesPage() {
           </h1>
 
           <p className={styles.heroText}>
-            KB Folding Services\ helps print shops, binderies, mail houses, and
+            KB Folding Services helps print shops, binderies, mail houses, and
             production teams repair, troubleshoot, maintain, and get more out of
             their folder machines and bindery equipment.
           </p>
@@ -208,7 +225,7 @@ export default function ServicesPage() {
               <p>
                 Whether a machine is down, running inconsistently, difficult to
                 set up, or no longer supported by the manufacturer, KB Folding
-                Solutions gives shops a practical place to start.
+                Services gives shops a practical place to start.
               </p>
             </div>
           </div>

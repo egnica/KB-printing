@@ -2,6 +2,36 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import NavBar from "./components/navBar";
+import { businessInfo, getFeaturedServices } from "./lib/services";
+
+const kennyImage =
+  "https://nciholasegner.s3.us-east-2.amazonaws.com/KB-Folding/images/kenny-neg.webp";
+
+export const metadata = {
+  title: `${businessInfo.name} | Folder Machine Repair & Bindery Equipment Service`,
+  description:
+    "KB Folding Services provides folder machine repair, troubleshooting, training, preventive maintenance, parts support, and bindery equipment service for print shops, binderies, mail houses, and production teams.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: `${businessInfo.name} | Folder Machine Repair & Support`,
+    description:
+      "Folder machine repair, troubleshooting, training, preventive maintenance, parts support, and bindery equipment service from Kenny Behling.",
+    url: businessInfo.url,
+    siteName: businessInfo.name,
+    type: "website",
+    images: [
+      {
+        url: `${businessInfo.url}/opengraph-image`,
+        width: 1200,
+        height: 630,
+        alt: "KB Folding Services - Folder Machine Repair and Bindery Equipment Support",
+      },
+    ],
+  },
+};
+
 export default function Home() {
   let company_name = "KB Folding Services";
 
@@ -9,8 +39,110 @@ export default function Home() {
   const startYear = 1980;
   const yearsOnJob = todayYear - startYear;
 
+  const kennyImage =
+    "https://nciholasegner.s3.us-east-2.amazonaws.com/KB-Folding/images/kenny-neg.webp";
+
+  const featuredServices = getFeaturedServices();
+
+  const homeJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${businessInfo.url}#website`,
+        name: businessInfo.name,
+        url: businessInfo.url,
+        description: businessInfo.description,
+        publisher: {
+          "@id": `${businessInfo.url}#business`,
+        },
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": `${businessInfo.url}#business`,
+        name: businessInfo.name,
+        legalName: businessInfo.legalName,
+        url: businessInfo.url,
+        description: businessInfo.description,
+        telephone: businessInfo.phone,
+        email: businessInfo.email,
+        image: kennyImage,
+        founder: {
+          "@type": "Person",
+          name: businessInfo.founderName,
+          jobTitle: "Founder",
+        },
+        areaServed: {
+          "@type": "Country",
+          name: businessInfo.serviceArea,
+        },
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: businessInfo.baseLocation,
+        },
+        knowsAbout: [
+          "Folder machine repair",
+          "Folder machine troubleshooting",
+          "Folder machine training",
+          "Preventive maintenance",
+          "Folder machine rebuilds",
+          "Bindery equipment service",
+          "Print finishing equipment",
+          "Folder machine parts",
+          "Baumer hhs glue systems",
+          "Wet scoring",
+        ],
+        brand: businessInfo.brands.map((brand) => ({
+          "@type": "Brand",
+          name: brand,
+        })),
+        makesOffer: featuredServices.map((service) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: service.title,
+            serviceType: service.serviceType,
+            description: service.summary,
+            url: `${businessInfo.url}/services/${service.slug}`,
+          },
+        })),
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${businessInfo.url}#webpage`,
+        name: metadata.title,
+        url: businessInfo.url,
+        description: metadata.description,
+        isPartOf: {
+          "@id": `${businessInfo.url}#website`,
+        },
+        about: {
+          "@id": `${businessInfo.url}#business`,
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${businessInfo.url}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: businessInfo.url,
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <main className={styles.main}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homeJsonLd),
+        }}
+      />
       <NavBar companyName={company_name} />
 
       <section className={styles.hero}>

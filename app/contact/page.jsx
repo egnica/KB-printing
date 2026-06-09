@@ -17,34 +17,82 @@ export const metadata = {
     url: `${businessInfo.url}/contact`,
     siteName: businessInfo.name,
     type: "website",
+    images: [
+      {
+        url: `${businessInfo.url}/opengraph-image`,
+        width: 1200,
+        height: 630,
+        alt: "KB Folding Services - Folder Machine Repair and Bindery Equipment Support",
+      },
+    ],
   },
 };
 
 export default function ContactPage() {
   const contactJsonLd = {
     "@context": "https://schema.org",
-    "@type": "ContactPage",
-    name: `Contact ${businessInfo.name}`,
-    url: `${businessInfo.url}/contact`,
-    about: {
-      "@type": "ProfessionalService",
-      name: businessInfo.name,
-      legalName: businessInfo.legalName,
-      url: businessInfo.url,
-      description: businessInfo.description,
-      founder: {
-        "@type": "Person",
-        name: businessInfo.founderName,
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "@id": `${businessInfo.url}/contact#contactpage`,
+        name: `Contact ${businessInfo.name}`,
+        url: `${businessInfo.url}/contact`,
+        description: metadata.description,
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": `${businessInfo.url}#website`,
+          name: businessInfo.name,
+          url: businessInfo.url,
+        },
+        about: {
+          "@id": `${businessInfo.url}#business`,
+        },
+        mainEntity: {
+          "@id": `${businessInfo.url}#business`,
+        },
       },
-      areaServed: {
-        "@type": "Country",
-        name: businessInfo.serviceArea,
+      {
+        "@type": "ProfessionalService",
+        "@id": `${businessInfo.url}#business`,
+        name: businessInfo.name,
+        legalName: businessInfo.legalName,
+        url: businessInfo.url,
+        description: businessInfo.description,
+        telephone: businessInfo.phone,
+        email: businessInfo.email,
+        founder: {
+          "@type": "Person",
+          name: businessInfo.founderName,
+          jobTitle: "Founder",
+        },
+        areaServed: {
+          "@type": "Country",
+          name: businessInfo.serviceArea,
+        },
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: businessInfo.baseLocation,
+        },
       },
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: businessInfo.baseLocation,
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${businessInfo.url}/contact#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: businessInfo.url,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Contact",
+            item: `${businessInfo.url}/contact`,
+          },
+        ],
       },
-    },
+    ],
   };
 
   return (

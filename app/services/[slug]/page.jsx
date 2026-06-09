@@ -9,6 +9,7 @@ import {
 } from "../../lib/services";
 import styles from "./serviceDetail.module.css";
 import Nav from "../../components/navBar";
+import ContactForm from "@/app/components/ContactForm/ContactForm";
 
 const siteUrl = businessInfo.url;
 
@@ -70,7 +71,16 @@ export async function generateMetadata({ params }) {
       title: service.metaTitle,
       description: service.metaDescription,
       url: pageUrl,
+      siteName: businessInfo.name,
       type: "website",
+      images: [
+        {
+          url: `${businessInfo.url}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: "KB Folding Services - Folder Machine Repair and Bindery Equipment Support",
+        },
+      ],
     },
   };
 }
@@ -339,6 +349,13 @@ export default async function ServiceDetailPage({ params }) {
             </Link>
           </div>
         </section>
+        <div style={{ padding: "20px 40px" }}>
+          <ContactForm
+            eyebrow="Request Service"
+            heading={`Need help with ${service.title.toLowerCase()}?`}
+            intro="Send the machine brand, model, issue, location, and urgency. Kenny can follow up with the best next step."
+          />
+        </div>
       </main>
     </>
   );
