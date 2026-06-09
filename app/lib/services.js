@@ -1,8 +1,12 @@
+const currentYear = new Date().getFullYear();
+const experienceStartYear = 1980;
+
 export const businessInfo = {
   name: "KB Folding Services",
   legalName: "KB Folding Services",
   founderName: "Kenny Behling",
-  experienceYears: 46,
+  experienceStartYear,
+  experienceYears: currentYear - experienceStartYear,
   baseLocation: "Greater Minneapolis-St. Paul Area",
   serviceArea: "United States",
   phone: "",
