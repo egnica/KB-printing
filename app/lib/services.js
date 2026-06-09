@@ -9,8 +9,8 @@ export const businessInfo = {
   experienceYears: currentYear - experienceStartYear,
   baseLocation: "Greater Minneapolis-St. Paul Area",
   serviceArea: "United States",
-  phone: "",
-  email: "",
+  phone: "612-735-6837",
+  email: "thefolderdude@outlook.com",
   url: "https://kbfoldingsolutions.com",
   description:
     "KB Folding Services provides folder machine repair, troubleshooting, training, maintenance, and bindery equipment support for print shops, binderies, mail houses, and production teams.",

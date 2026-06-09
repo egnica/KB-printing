@@ -1,0 +1,148 @@
+/* components/ContactForm/contactForm.module.css */
+
+.contactBlock {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.content {
+  max-width: 460px;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: #9b6b25;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.content h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  line-height: 1.07;
+  letter-spacing: -0.04em;
+}
+
+.content p:not(.eyebrow) {
+  margin: 1.1rem 0 0;
+  color: #504a40;
+  font-size: 1.06rem;
+  line-height: 1.75;
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+  padding: 1.35rem;
+  border-radius: 24px;
+  background: #fffaf0;
+  border: 1px solid rgba(25, 23, 20, 0.12);
+  box-shadow: 0 18px 42px rgba(60, 45, 24, 0.14);
+}
+
+.twoColumn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form label {
+  display: grid;
+  gap: 0.45rem;
+  color: #29251f;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  border: 1px solid rgba(25, 23, 20, 0.18);
+  border-radius: 14px;
+  background: #f6f1e8;
+  color: #191714;
+  font: inherit;
+  font-weight: 500;
+  padding: 0.9rem 0.95rem;
+  outline: none;
+}
+
+.form textarea {
+  resize: vertical;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #9b6b25;
+  box-shadow: 0 0 0 3px rgba(214, 168, 95, 0.24);
+}
+
+.submitButton {
+  min-height: 48px;
+  width: fit-content;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.85rem 1.25rem;
+  background: #d6a85f;
+  color: #111;
+  font-weight: 850;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    background 160ms ease;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  background: #e2b66d;
+}
+
+.submitButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
+}
+
+.error {
+  margin: 0;
+  color: #8a1f11;
+  font-weight: 800;
+}
+
+.success {
+  margin: 0;
+  color: #295c2d;
+  font-weight: 850;
+}
+
+.hiddenField {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .contactBlock {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .content {
+    max-width: 760px;
+  }
+}
+
+@media (max-width: 620px) {
+  .twoColumn {
+    grid-template-columns: 1fr;
+  }
+
+  .submitButton {
+    width: 100%;
+  }
+}
