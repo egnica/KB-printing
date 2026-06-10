@@ -330,9 +330,9 @@
 }
 
 .secondaryButton {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #000000;
+  background: rgba(255, 255, 255, 0.664);
+  border: 1px solid rgba(151, 151, 151, 0.45);
   backdrop-filter: blur(6px);
 }
 
@@ -607,7 +607,7 @@
   padding: 0.95rem 1.3rem;
   border-radius: 999px;
   background: #d6a85f;
-  color: #080808;
+  color: #000000;
   font-weight: 800;
   text-decoration: none;
   transition:
