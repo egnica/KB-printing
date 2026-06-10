@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://kbfoldingservices.com"),
+  metadataBase: new URL("https://kbfolderservices.com"),
   title: {
     default: "KB Folder Services | Folder Machine Repair & Bindery Support",
     template: "%s",
