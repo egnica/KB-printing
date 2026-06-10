@@ -12,7 +12,7 @@ export default function ContactForm({
 }) {
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState("");
-  const [startedAt] = useState(Date.now());
+  const [startedAt] = useState(() => Date.now());
 
   async function handleSubmit(event) {
     event.preventDefault();
