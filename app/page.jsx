@@ -245,7 +245,7 @@ export default function Home() {
           </div>
 
           <div className={styles.cardGrid}>
-            <Link href="https://main.dtgywjueb646q.amplifyapp.com/services/folder-machine-repair">
+            <Link href="./services/folder-machine-repair">
               <article className={styles.card}>
                 <h3>Folder Machine Repair</h3>
                 <p>
@@ -254,7 +254,7 @@ export default function Home() {
                 </p>
               </article>
             </Link>
-            <Link href="https://main.dtgywjueb646q.amplifyapp.com/services/preventive-maintenance">
+            <Link href="./services/preventive-maintenance">
               <article className={styles.card}>
                 <h3>Preventive Maintenance</h3>
                 <p>
@@ -263,7 +263,7 @@ export default function Home() {
                 </p>
               </article>
             </Link>
-            <Link href="https://main.dtgywjueb646q.amplifyapp.com/services/folder-machine-training">
+            <Link href="./services/folder-machine-training">
               <article className={styles.card}>
                 <h3>Operator Training</h3>
                 <p>
@@ -272,7 +272,7 @@ export default function Home() {
                 </p>
               </article>
             </Link>
-            <Link href="https://main.dtgywjueb646q.amplifyapp.com/services/parts-support">
+            <Link href="./services/parts-support">
               <article className={styles.card}>
                 <h3>Parts Support</h3>
                 <p>
