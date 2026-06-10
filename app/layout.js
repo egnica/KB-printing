@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer/Footer";
-import Script from 'next/script';
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://kbfoldingsolutions.com"),
+  metadataBase: new URL("https://kbfoldingservices.com"),
   title: {
     default: "KB Folding Services | Folder Machine Repair & Bindery Support",
     template: "%s",
@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-      {/* Google Analytics Tracking Script */}
+        {/* Google Analytics Tracking Script */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-566EHW96DY"
           strategy="afterInteractive"
