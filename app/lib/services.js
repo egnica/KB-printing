@@ -2,8 +2,8 @@ const currentYear = new Date().getFullYear();
 const experienceStartYear = 1980;
 
 export const businessInfo = {
-  name: "KB Folding Services",
-  legalName: "KB Folding Services",
+  name: "KB Folder Services",
+  legalName: "KB Folder Services",
   founderName: "Kenny Behling",
   experienceStartYear,
   experienceYears: currentYear - experienceStartYear,
@@ -11,9 +11,9 @@ export const businessInfo = {
   serviceArea: "United States",
   phone: "612-735-6837",
   email: "thefolderdude@outlook.com",
-  url: "https://kbfoldingservices.com",
+  url: "https://kbfolderservices.com",
   description:
-    "KB Folding Services provides folder machine repair, troubleshooting, training, maintenance, and bindery equipment support for print shops, binderies, mail houses, and production teams.",
+    "KB Folder Services provides folder machine repair, troubleshooting, training, maintenance, and bindery equipment support for print shops, binderies, mail houses, and production teams.",
   brands: [
     "MBO",
     "Stahl",
@@ -42,9 +42,9 @@ export const services = [
     slug: "folder-machine-repair",
     title: "Folder Machine Repair",
     h1: "Folder Machine Repair for Print Shops and Binderies",
-    metaTitle: "Folder Machine Repair | KB Folding Services",
+    metaTitle: "Folder Machine Repair | KB Folder Services",
     metaDescription:
-      "KB Folding Services provides folder machine repair, troubleshooting, parts support, and service for print shops, binderies, and finishing departments.",
+      "KB Folder Services provides folder machine repair, troubleshooting, parts support, and service for print shops, binderies, and finishing departments.",
     summary:
       "Hands-on repair support for commercial folder machines experiencing jams, misfeeds, inconsistent folds, worn parts, roller issues, and production delays.",
     serviceType: "Folder Machine Repair",
@@ -115,9 +115,9 @@ export const services = [
     slug: "folder-machine-rebuilds",
     title: "Folder Machine Rebuilds",
     h1: "Folder Machine Rebuilds, Roller Recovery, and Repair Support",
-    metaTitle: "Folder Machine Rebuilds | KB Folding Services",
+    metaTitle: "Folder Machine Rebuilds | KB Folder Services",
     metaDescription:
-      "KB Folding Services helps with folder machine rebuilds, roller replacement or recovery, parts guidance, and repair support for print finishing equipment.",
+      "KB Folder Services helps with folder machine rebuilds, roller replacement or recovery, parts guidance, and repair support for print finishing equipment.",
     summary:
       "Support for folder rebuilds, including worn roller issues, recovered rollers, parts guidance, and practical recommendations for restoring machine performance.",
     serviceType: "Folder Machine Rebuilds",
@@ -171,7 +171,7 @@ export const services = [
     slug: "folder-machine-troubleshooting",
     title: "Folder Machine Troubleshooting",
     h1: "Folder Machine Troubleshooting In Person or Over the Phone",
-    metaTitle: "Folder Machine Troubleshooting | KB Folding Services",
+    metaTitle: "Folder Machine Troubleshooting | KB Folder Services",
     metaDescription:
       "Get practical folder machine troubleshooting for jams, misfeeds, fold problems, setup issues, and production slowdowns. In-person and phone support available.",
     summary:
@@ -251,9 +251,9 @@ export const services = [
     slug: "folder-machine-training",
     title: "Folder Machine Training",
     h1: "Folder Machine Operator Training from Folding 101 to Specialized Folding",
-    metaTitle: "Folder Machine Training | KB Folding Services",
+    metaTitle: "Folder Machine Training | KB Folder Services",
     metaDescription:
-      "KB Folding Services provides folder machine operator training, setup guidance, and folding instruction for print shops, binderies, and production teams.",
+      "KB Folder Services provides folder machine operator training, setup guidance, and folding instruction for print shops, binderies, and production teams.",
     summary:
       "Training for operators and production teams, from basic Folding 101 concepts to more specialized folding support.",
     serviceType: "Folder Machine Training",
@@ -313,7 +313,7 @@ export const services = [
     slug: "preventive-maintenance",
     title: "Preventive Maintenance",
     h1: "Preventive Maintenance for Folder Machines and Bindery Equipment",
-    metaTitle: "Preventive Maintenance | KB Folding Services",
+    metaTitle: "Preventive Maintenance | KB Folder Services",
     metaDescription:
       "Preventive maintenance for folder machines and bindery equipment to help reduce downtime, catch problems early, and keep production running.",
     summary:
@@ -387,9 +387,9 @@ export const services = [
     slug: "baumer-hhs-glue-systems",
     title: "Baumer hhs Glue Systems",
     h1: "Baumer hhs Glue System Support and Folder Modifications",
-    metaTitle: "Baumer hhs Glue Systems | KB Folding Services",
+    metaTitle: "Baumer hhs Glue Systems | KB Folder Services",
     metaDescription:
-      "KB Folding Services provides support for Baumer hhs hot and cold glue systems, folder modifications, parts guidance, and training.",
+      "KB Folder Services provides support for Baumer hhs hot and cold glue systems, folder modifications, parts guidance, and training.",
     summary:
       "Support for Baumer hhs hot and cold glue systems, including folder modifications, troubleshooting, parts guidance, and training.",
     serviceType: "Baumer hhs Glue System Support",
@@ -445,9 +445,9 @@ export const services = [
     slug: "wet-scoring",
     title: "Wet Scoring",
     h1: "Wet Scoring Parts, Training, and Folder Machine Support",
-    metaTitle: "Wet Scoring Support | KB Folding Services",
+    metaTitle: "Wet Scoring Support | KB Folder Services",
     metaDescription:
-      "KB Folding Services provides wet scoring support, parts guidance, and training for folder machines and bindery production teams.",
+      "KB Folder Services provides wet scoring support, parts guidance, and training for folder machines and bindery production teams.",
     summary:
       "Wet scoring support for print shops and binderies, including parts guidance, training, setup help, and troubleshooting.",
     serviceType: "Wet Scoring Support",
@@ -496,9 +496,9 @@ export const services = [
     slug: "bindery-equipment-service",
     title: "Bindery Equipment Service",
     h1: "Bindery Equipment Service for Print Finishing Departments",
-    metaTitle: "Bindery Equipment Service | KB Folding Services",
+    metaTitle: "Bindery Equipment Service | KB Folder Services",
     metaDescription:
-      "KB Folding Services provides bindery equipment service for folder machines, paper cutters, stitchers, glue systems, deliveries, and print finishing equipment.",
+      "KB Folder Services provides bindery equipment service for folder machines, paper cutters, stitchers, glue systems, deliveries, and print finishing equipment.",
     summary:
       "Broader bindery and print finishing equipment support beyond folder machines, including paper cutters, stitchers, glue systems, and delivery systems.",
     serviceType: "Bindery Equipment Service",
@@ -546,7 +546,7 @@ export const services = [
     ],
     faq: [
       {
-        question: "Does KB Folding Services only work on folder machines?",
+        question: "Does KB Folder Services only work on folder machines?",
         answer:
           "No. Folder machines are a major focus, but Kenny also works with related bindery and print finishing equipment, including paper cutters, stitchers, glue systems, and delivery systems.",
       },
@@ -562,9 +562,9 @@ export const services = [
     slug: "parts-support",
     title: "Parts Support",
     h1: "Folder Machine Parts Support and Practical Repair Guidance",
-    metaTitle: "Folder Machine Parts Support | KB Folding Services",
+    metaTitle: "Folder Machine Parts Support | KB Folder Services",
     metaDescription:
-      "KB Folding Services helps identify, source, recommend, and support folder machine parts for repair, maintenance, and troubleshooting.",
+      "KB Folder Services helps identify, source, recommend, and support folder machine parts for repair, maintenance, and troubleshooting.",
     summary:
       "Practical parts support for folder machine repair, maintenance, troubleshooting, rebuilds, wet scoring, and glue system work.",
     serviceType: "Folder Machine Parts Support",

@@ -41,7 +41,7 @@ export default function Image() {
             color: "#d6a85f",
           }}
         >
-          KB Folding Services
+          KB Folder Services
         </div>
 
         <div

@@ -8,17 +8,17 @@ const pageUrl = `${siteUrl}/services`;
 
 export const metadata = {
   title:
-    "Folder Machine Repair, Maintenance, Training, and Bindery Equipment Service | KB Folding Services",
+    "Folder Machine Repair, Maintenance, Training, and Bindery Equipment Service | KB Folder Services",
   description:
-    "KB Folding Services provides folder machine repair, troubleshooting, preventive maintenance, operator training, parts support, glue system support, wet scoring, and bindery equipment service.",
+    "KB Folder Services provides folder machine repair, troubleshooting, preventive maintenance, operator training, parts support, glue system support, wet scoring, and bindery equipment service.",
   alternates: {
     canonical: "/services",
   },
   openGraph: {
     title:
-      "Folder Machine Repair, Maintenance, Training, and Bindery Equipment Service | KB Folding Services",
+      "Folder Machine Repair, Maintenance, Training, and Bindery Equipment Service | KB Folder Services",
     description:
-      "KB Folding Services provides folder machine repair, troubleshooting, preventive maintenance, operator training, parts support, glue system support, wet scoring, and bindery equipment service.",
+      "KB Folder Services provides folder machine repair, troubleshooting, preventive maintenance, operator training, parts support, glue system support, wet scoring, and bindery equipment service.",
     url: pageUrl,
     siteName: businessInfo.name,
     type: "website",
@@ -27,7 +27,7 @@ export const metadata = {
         url: `${businessInfo.url}/opengraph-image`,
         width: 1200,
         height: 630,
-        alt: "KB Folding Services - Folder Machine Repair and Bindery Equipment Support",
+        alt: "KB Folder Services - Folder Machine Repair and Bindery Equipment Support",
       },
     ],
   },
@@ -126,7 +126,7 @@ function buildServicesPageJsonLd() {
       {
         "@type": "ItemList",
         "@id": `${pageUrl}#services-list`,
-        name: "KB Folding Services Services",
+        name: "KB Folder Services Services",
         itemListElement: services.map((service, index) => ({
           "@type": "ListItem",
           position: index + 1,
@@ -186,7 +186,7 @@ export default function ServicesPage() {
           </h1>
 
           <p className={styles.heroText}>
-            KB Folding Services helps print shops, binderies, mail houses, and
+            KB Folder Services helps print shops, binderies, mail houses, and
             production teams repair, troubleshoot, maintain, and get more out of
             their folder machines and bindery equipment.
           </p>
@@ -224,7 +224,7 @@ export default function ServicesPage() {
 
               <p>
                 Whether a machine is down, running inconsistently, difficult to
-                set up, or no longer supported by the manufacturer, KB Folding
+                set up, or no longer supported by the manufacturer, KB Folder
                 Services gives shops a practical place to start.
               </p>
             </div>
@@ -332,7 +332,7 @@ export default function ServicesPage() {
               <p className={styles.eyebrow}>Why Call Kenny</p>
               <h2>More than general repair support.</h2>
               <p>
-                KB Folding Services is built around practical experience,
+                KB Folder Services is built around practical experience,
                 availability, and machine knowledge that comes from decades in
                 the print finishing industry.
               </p>
@@ -358,7 +358,7 @@ export default function ServicesPage() {
           </p>
 
           <Link href="/contact" className={styles.primaryButton}>
-            Contact KB Folding Services
+            Contact KB Folder Services
           </Link>
         </div>
       </section>

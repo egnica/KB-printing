@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 export const metadata = {
   metadataBase: new URL("https://kbfoldingservices.com"),
   title: {
-    default: "KB Folding Services | Folder Machine Repair & Bindery Support",
+    default: "KB Folder Services | Folder Machine Repair & Bindery Support",
     template: "%s",
   },
   description:
-    "KB Folding Services provides folder machine repair, troubleshooting, training, preventive maintenance, parts support, and bindery equipment service for print shops, binderies, mail houses, and production teams.",
+    "KB Folder Services provides folder machine repair, troubleshooting, training, preventive maintenance, parts support, and bindery equipment service for print shops, binderies, mail houses, and production teams.",
 };
 
 export default function RootLayout({ children }) {

@@ -55,7 +55,7 @@ export async function generateMetadata({ params }) {
 
   if (!service) {
     return {
-      title: "Service Not Found | KB Folding Services",
+      title: "Service Not Found | KB Folder Services",
     };
   }
 
@@ -78,7 +78,7 @@ export async function generateMetadata({ params }) {
           url: `${businessInfo.url}/opengraph-image`,
           width: 1200,
           height: 630,
-          alt: "KB Folding Services - Folder Machine Repair and Bindery Equipment Support",
+          alt: "KB Folder Services - Folder Machine Repair and Bindery Equipment Support",
         },
       ],
     },
@@ -340,12 +340,12 @@ export default async function ServiceDetailPage({ params }) {
           <div className={styles.container}>
             <h2>Need help with {service.title.toLowerCase()}?</h2>
             <p>
-              Reach out to KB Folding Services for practical support with folder
+              Reach out to KB Folder Services for practical support with folder
               machines, bindery equipment, troubleshooting, training, parts, and
               production issues.
             </p>
             <Link href="/contact" className={styles.ctaButton}>
-              Contact KB Folding Services
+              Contact KB Folder Services
             </Link>
           </div>
         </section>
