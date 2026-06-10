@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import NavBar from "./components/navBar";
 import { businessInfo, getFeaturedServices } from "./lib/services";
+import ContactForm from "./components/ContactForm/ContactForm";
 
 const kennyImage =
   "https://nciholasegner.s3.us-east-2.amazonaws.com/KB-Folding/images/kenny-neg.webp";
@@ -193,13 +194,13 @@ export default function Home() {
             </p>
 
             <div className={styles.heroActions}>
-              <a href="/contact" className={styles.primaryButton}>
+              <Link href="/contact" className={styles.primaryButton}>
                 Request Service
-              </a>
+              </Link>
 
-              <a href="/services" className={styles.secondaryButton}>
+              <Link href="/services" className={styles.secondaryButton}>
                 Services Section
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -223,9 +224,11 @@ export default function Home() {
           </div>
 
           <div className={styles.introImageWrap}>
-            <img
+            <Image
               src="https://nciholasegner.s3.us-east-2.amazonaws.com/KB-Folding/images/IMG_1705.webp"
               alt="Kenny Behling working with folder machine equipment"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className={styles.introImage}
             />
           </div>
@@ -280,9 +283,9 @@ export default function Home() {
             </Link>
           </div>
 
-          <a href="/services" className={styles.textLink}>
+          <Link href="/services" className={styles.textLink}>
             See all services
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -293,11 +296,15 @@ export default function Home() {
         <div className={styles.container}>
           <div className={styles.splitLayout}>
             <div className={styles.splitLayer}>
-              <img
-                className={styles.introImageWrap}
-                src="https://nciholasegner.s3.us-east-2.amazonaws.com/KB-Folding/images/IMG_1709.webp"
-                alt="Folder machine maintance"
-              />
+              <div className={styles.introImageWrap}>
+                <Image
+                  src="https://nciholasegner.s3.us-east-2.amazonaws.com/KB-Folding/images/IMG_1709.webp"
+                  alt="Folder machine maintenance"
+                  fill
+                  sizes="(max-width: 900px) 100vw, 50vw"
+                  className={styles.introImage}
+                />
+              </div>
             </div>
 
             <div className={styles.bulletList}>
@@ -330,16 +337,25 @@ export default function Home() {
         </div>
         <br />
         <div className={styles.splitPics}>
-          <img
-            className={styles.introImageWrap}
-            src="https://nciholasegner.s3.us-east-2.amazonaws.com/KB-Folding/images/IMG_3555+4C.webp"
-            alt="Folder machine 1"
-          />
-          <img
-            className={styles.introImageWrap}
-            src="https://nciholasegner.s3.us-east-2.amazonaws.com/KB-Folding/images/PRE-Belt%232+0225.webp"
-            alt="Folder machine 2"
-          />
+          <div className={styles.introImageWrap}>
+            <Image
+              src="https://nciholasegner.s3.us-east-2.amazonaws.com/KB-Folding/images/IMG_3555+4C.webp"
+              alt="Folder machine 1"
+              fill
+              sizes="(max-width: 900px) 100vw, 50vw"
+              className={styles.introImage}
+            />
+          </div>
+
+          <div className={styles.introImageWrap}>
+            <Image
+              src="https://nciholasegner.s3.us-east-2.amazonaws.com/KB-Folding/images/PRE-Belt%232+0225.webp"
+              alt="Folder machine 2"
+              fill
+              sizes="(max-width: 900px) 100vw, 50vw"
+              className={styles.introImage}
+            />
+          </div>
         </div>
       </section>
 
@@ -357,21 +373,16 @@ export default function Home() {
             the customer is willing to cover travel.
           </p>
         </div>
+        <br />
+        <br />
       </section>
 
-      <section className={styles.finalCta}>
-        <div className={styles.container}>
-          <h2>Need help with a folder machine or bindery equipment issue?</h2>
-
-          <p>
-            Send the machine brand, model, issue description, location, and
-            urgency so Kenny can understand the problem and follow up.
-          </p>
-
-          <a href="/contact" className={styles.primaryButton}>
-            Request Service
-          </a>
-        </div>
+      <section style={{ padding: "20px 40px", backgroundColor: "#e5d2ad;" }}>
+        <ContactForm
+          eyebrow="Request Service"
+          heading={`Need help with Service`}
+          intro="Send the machine brand, model, issue, location, and urgency. Kenny can follow up with the best next step."
+        />
       </section>
     </main>
   );
