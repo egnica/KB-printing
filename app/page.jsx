@@ -377,7 +377,7 @@ export default function Home() {
         <br />
       </section>
 
-      <section style={{ padding: "20px 40px", backgroundColor: "#e5d2ad;" }}>
+      <section style={{ padding: "40px 40px", backgroundColor: "#e5d2ad" }}>
         <ContactForm
           eyebrow="Request Service"
           heading={`Need help with Service`}
