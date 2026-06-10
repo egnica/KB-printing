@@ -349,13 +349,13 @@ export default async function ServiceDetailPage({ params }) {
             </Link>
           </div>
         </section>
-        <div style={{ padding: "20px 40px" }}>
+        <section style={{ padding: "20px 40px" }}>
           <ContactForm
             eyebrow="Request Service"
             heading={`Need help with ${service.title.toLowerCase()}?`}
             intro="Send the machine brand, model, issue, location, and urgency. Kenny can follow up with the best next step."
           />
-        </div>
+        </section>
       </main>
     </>
   );

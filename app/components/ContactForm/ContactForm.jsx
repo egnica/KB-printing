@@ -59,7 +59,7 @@ export default function ContactForm({
   }
 
   return (
-    <section className={styles.contactBlock}>
+    <div className={styles.contactBlock}>
       <div className={styles.content}>
         <p className={styles.eyebrow}>{eyebrow}</p>
         <h2>{heading}</h2>
@@ -135,6 +135,6 @@ export default function ContactForm({
           {status === "loading" ? "Sending..." : "Send Message"}
         </button>
       </form>
-    </section>
+    </div>
   );
 }

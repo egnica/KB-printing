@@ -127,13 +127,13 @@ export default function ContactPage() {
       </section>
 
       <section className={styles.contactSection}>
-        <div className={styles.container}>
+        <section className={styles.container}>
           <ContactForm
             eyebrow="Send a Message"
             heading="Need help keeping production moving?"
             intro="Use the form to describe what is going on with your folder machine or bindery equipment. Include the machine brand, model if you know it, what the problem looks like, and how urgent it is."
           />
-        </div>
+        </section>
       </section>
 
       <section className={styles.infoSection}>
