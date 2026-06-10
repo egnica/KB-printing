@@ -79,47 +79,66 @@ export default function ContactForm({
         </div>
 
         <div className={styles.twoColumn}>
-          <label>
-            Name
-            <input name="name" type="text" autoComplete="name" required />
-          </label>
+          <div>
+            <label htmlFor="name">Name *</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autoComplete="name"
+              required
+            />
+          </div>
 
-          <label>
-            Email
-            <input name="email" type="email" autoComplete="email" required />
-          </label>
+          <div>
+            <label htmlFor="email">Email *</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              required
+            />
+          </div>
         </div>
 
         <div className={styles.twoColumn}>
-          <label>
-            Phone
-            <input name="phone" type="tel" autoComplete="tel" />
-          </label>
+          <div>
+            <label htmlFor="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autoComplete="tel" />
+          </div>
 
-          <label>
-            Company
-            <input name="company" type="text" autoComplete="organization" />
-          </label>
+          <div>
+            <label htmlFor="company">Company</label>
+            <input
+              id="company"
+              name="company"
+              type="text"
+              autoComplete="organization"
+            />
+          </div>
         </div>
 
-        <label>
-          Machine / Equipment
+        <div>
+          <label htmlFor="machine">Machine / Equipment</label>
           <input
+            id="machine"
             name="machine"
             type="text"
             placeholder="MBO, Stahl, Baum, folder machine, glue system..."
           />
-        </label>
+        </div>
 
-        <label>
-          What is going on?
+        <div>
+          <label htmlFor="message">What is going on? *</label>
           <textarea
+            id="message"
             name="message"
             rows="6"
             placeholder="Tell Kenny what machine you have, what problem you are seeing, and how urgent it is."
             required
           />
-        </label>
+        </div>
 
         {error && <p className={styles.error}>{error}</p>}
 

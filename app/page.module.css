@@ -505,6 +505,7 @@
 
 .card {
   min-height: 220px;
+  position: relative;
   padding: 1.4rem;
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.055);
@@ -532,6 +533,16 @@
   margin: 0;
   color: rgba(245, 245, 245, 0.68);
   line-height: 1.65;
+}
+
+.mainLink::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; /* Puts the invisible click-sheet over the card */
 }
 
 .textLink {
