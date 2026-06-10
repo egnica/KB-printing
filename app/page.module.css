@@ -535,16 +535,6 @@
   line-height: 1.65;
 }
 
-.mainLink::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1; /* Puts the invisible click-sheet over the card */
-}
-
 .textLink {
   display: inline-flex;
   margin-top: 1.75rem;

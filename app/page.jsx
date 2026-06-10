@@ -245,65 +245,54 @@ export default function Home() {
           </div>
 
           <div className={styles.cardGrid}>
-            <article className={styles.card}>
-              <h3>
-                <Link
-                  href="./services/folder-machine-repair"
-                  className={styles.mainLink}
-                >
-                  Folder Machine Repair
-                </Link>
-              </h3>
-              <p>
-                Troubleshooting and repair for folder machines, older equipment,
-                machine issues, and down production lines.
-              </p>
-            </article>
+            <Link
+              href="./services/folder-machine-repair"
+              className={styles.mainLink}
+            >
+              <article className={styles.card}>
+                <h3>Folder Machine Repair</h3>
+                <p>
+                  Troubleshooting and repair for folder machines, older
+                  equipment, machine issues, and down production lines.
+                </p>
+              </article>
+            </Link>
 
-            <article className={styles.card}>
-              <h3>
-                <Link
-                  href="./services/preventive-maintenance"
-                  className={styles.mainLink}
-                >
-                  Preventive Maintenance
-                </Link>
-              </h3>
-              <p>
-                Ongoing machine care to help reduce downtime, catch issues
-                earlier, and keep equipment running properly.
-              </p>
-            </article>
+            <Link
+              href="./services/preventive-maintenance"
+              className={styles.mainLink}
+            >
+              <article className={styles.card}>
+                <h3>Preventive Maintenance</h3>
+                <p>
+                  Ongoing machine care to help reduce downtime, catch issues
+                  earlier, and keep equipment running properly.
+                </p>
+              </article>
+            </Link>
 
-            <article className={styles.card}>
-              <h3>
-                <Link
-                  href="./services/folder-machine-training"
-                  className={styles.mainLink}
-                >
-                  Operator Training
-                </Link>
-              </h3>
-              <p>
-                Practical training and guidance for operators who need to better
-                understand setup, use, and common machine problems.
-              </p>
-            </article>
+            <Link
+              href="./services/folder-machine-training"
+              className={styles.mainLink}
+            >
+              <article className={styles.card}>
+                <h3>Operator Training</h3>
+                <p>
+                  Practical training and guidance for operators who need to
+                  better understand setup, use, and common machine problems.
+                </p>
+              </article>
+            </Link>
 
-            <article className={styles.card}>
-              <h3>
-                <Link
-                  href="./services/parts-support"
-                  className={styles.mainLink}
-                >
-                  Parts Support
-                </Link>
-              </h3>
-              <p>
-                Help identifying, sourcing, recommending, and selling parts for
-                folding and bindery equipment.
-              </p>
-            </article>
+            <Link href="./services/parts-support" className={styles.mainLink}>
+              <article className={styles.card}>
+                <h3>Parts Support</h3>
+                <p>
+                  Help identifying, sourcing, recommending, and selling parts
+                  for folding and bindery equipment.
+                </p>
+              </article>
+            </Link>
           </div>
 
           <Link href="/services" className={styles.textLink}>
@@ -392,7 +381,7 @@ export default function Home() {
           </h2>
 
           <p>
-            {company_name} is based in Minnesota and can travel countrywide when
+            {company_name}is based in Minnesota and can travel countrywide when
             the customer is willing to cover travel.
           </p>
         </div>
