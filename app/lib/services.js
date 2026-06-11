@@ -2,8 +2,8 @@ const currentYear = new Date().getFullYear();
 const experienceStartYear = 1980;
 
 export const businessInfo = {
-  name: "Kenny’s  Folder Services",
-  legalName: "Kenny’s  Folder Services",
+  name: "Kenny’s Folder Services",
+  legalName: "Kenny’s Folder Services",
   founderName: "Kenny Behling",
   experienceStartYear,
   experienceYears: currentYear - experienceStartYear,
