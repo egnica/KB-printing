@@ -41,7 +41,7 @@ export default function Image() {
             color: "#d6a85f",
           }}
         >
-          KB Folder Services
+          Kenny&apos;s Folder Services
         </div>
 
         <div
