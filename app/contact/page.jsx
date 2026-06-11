@@ -6,14 +6,14 @@ import Nav from "../components/navBar";
 export const metadata = {
   title: `Contact ${businessInfo.name} | Folder Machine Repair & Support`,
   description:
-    "Contact KB Folder Services for folder machine repair, troubleshooting, training, maintenance, parts support, and bindery equipment service.",
+    "Contact Kenny's Folder Services for folder machine repair, troubleshooting, training, maintenance, parts support, and bindery equipment service.",
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
     title: `Contact ${businessInfo.name}`,
     description:
-      "Get in touch with KB Folder Services for folder machine repair, troubleshooting, training, maintenance, and bindery equipment support.",
+      "Get in touch with Kenny's Folder Services for folder machine repair, troubleshooting, training, maintenance, and bindery equipment support.",
     url: `${businessInfo.url}/contact`,
     siteName: businessInfo.name,
     type: "website",
@@ -22,7 +22,7 @@ export const metadata = {
         url: `${businessInfo.url}/opengraph-image`,
         width: 1200,
         height: 630,
-        alt: "KB Folder Services - Folder Machine Repair and Bindery Equipment Support",
+        alt: "Kenny's Folder Services - Folder Machine Repair and Bindery Equipment Support",
       },
     ],
   },

@@ -8,17 +8,17 @@ const pageUrl = `${siteUrl}/services`;
 
 export const metadata = {
   title:
-    "Folder Machine Repair, Maintenance, Training, and Bindery Equipment Service | KB Folder Services",
+    "Folder Machine Repair, Maintenance, Training, and Bindery Equipment Service | Kenny's Folder Services",
   description:
-    "KB Folder Services provides folder machine repair, troubleshooting, preventive maintenance, operator training, parts support, glue system support, wet scoring, and bindery equipment service.",
+    "Kenny's Folder Services provides folder machine repair, troubleshooting, preventive maintenance, operator training, parts support, glue system support, wet scoring, and bindery equipment service.",
   alternates: {
     canonical: "/services",
   },
   openGraph: {
     title:
-      "Folder Machine Repair, Maintenance, Training, and Bindery Equipment Service | KB Folder Services",
+      "Folder Machine Repair, Maintenance, Training, and Bindery Equipment Service | Kenny's Folder Services",
     description:
-      "KB Folder Services provides folder machine repair, troubleshooting, preventive maintenance, operator training, parts support, glue system support, wet scoring, and bindery equipment service.",
+      "Kenny's Folder Services provides folder machine repair, troubleshooting, preventive maintenance, operator training, parts support, glue system support, wet scoring, and bindery equipment service.",
     url: pageUrl,
     siteName: businessInfo.name,
     type: "website",
@@ -27,7 +27,7 @@ export const metadata = {
         url: `${businessInfo.url}/opengraph-image`,
         width: 1200,
         height: 630,
-        alt: "KB Folder Services - Folder Machine Repair and Bindery Equipment Support",
+        alt: "Kenny's Folder Services - Folder Machine Repair and Bindery Equipment Support",
       },
     ],
   },
@@ -126,7 +126,7 @@ function buildServicesPageJsonLd() {
       {
         "@type": "ItemList",
         "@id": `${pageUrl}#services-list`,
-        name: "KB Folder Services Services",
+        name: "Kenny's Folder Services Services",
         itemListElement: services.map((service, index) => ({
           "@type": "ListItem",
           position: index + 1,
@@ -186,9 +186,9 @@ export default function ServicesPage() {
           </h1>
 
           <p className={styles.heroText}>
-            KB Folder Services helps print shops, binderies, mail houses, and
-            production teams repair, troubleshoot, maintain, and get more out of
-            their folder machines and bindery equipment.
+            Kenny&#39;s Folder Services helps print shops, binderies, mail
+            houses, and production teams repair, troubleshoot, maintain, and get
+            more out of their folder machines and bindery equipment.
           </p>
 
           <div className={styles.heroActions}>
@@ -224,8 +224,8 @@ export default function ServicesPage() {
 
               <p>
                 Whether a machine is down, running inconsistently, difficult to
-                set up, or no longer supported by the manufacturer, KB Folder
-                Services gives shops a practical place to start.
+                set up, or no longer supported by the manufacturer, Kenny&#39;s
+                Folder Services gives shops a practical place to start.
               </p>
             </div>
           </div>
@@ -332,9 +332,9 @@ export default function ServicesPage() {
               <p className={styles.eyebrow}>Why Call Kenny</p>
               <h2>More than general repair support.</h2>
               <p>
-                KB Folder Services is built around practical experience,
-                availability, and machine knowledge that comes from decades in
-                the print finishing industry.
+                Kenny&#39;s Folder Services is built around practical
+                experience, availability, and machine knowledge that comes from
+                decades in the print finishing industry.
               </p>
             </div>
 
@@ -358,7 +358,7 @@ export default function ServicesPage() {
           </p>
 
           <Link href="/contact" className={styles.primaryButton}>
-            Contact KB Folder Services
+            Contact Kenny&#39;s Folder Services
           </Link>
         </div>
       </section>

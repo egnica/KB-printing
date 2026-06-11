@@ -6,7 +6,7 @@ import { useState } from "react";
 import styles from "./contactForm.module.css";
 
 export default function ContactForm({
-  eyebrow = "Contact KB Folder Services",
+  eyebrow = "Contact Kenny's Folder Services",
   heading = "Need help with a folder machine?",
   intro = "Send a message with the issue, machine, location, and urgency. Kenny can follow up with the best next step.",
 }) {

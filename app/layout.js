@@ -14,13 +14,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://kbfolderservices.com"),
+  metadataBase: new URL("https://kennysfolderservices.com"),
   title: {
-    default: "KB Folder Services | Folder Machine Repair & Bindery Support",
+    default:
+      "Kenny's Folder Services | Folder Machine Repair & Bindery Support",
     template: "%s",
   },
   description:
-    "KB Folder Services provides folder machine repair, troubleshooting, training, preventive maintenance, parts support, and bindery equipment service for print shops, binderies, mail houses, and production teams.",
+    "Kenny's Folder Services provides folder machine repair, troubleshooting, training, preventive maintenance, parts support, and bindery equipment service for print shops, binderies, mail houses, and production teams.",
 };
 
 export default function RootLayout({ children }) {

@@ -208,7 +208,7 @@ export default function AboutPage() {
               </p>
 
               <p>
-                That background helps KB Folder Services support shops in a
+                That background helps Kenny's Folder Services support shops in a
                 practical way. Kenny understands what happens when a folder is
                 down, when a job will not dial in, when parts are worn, or when
                 operators need better support to keep production moving.
@@ -248,7 +248,7 @@ export default function AboutPage() {
           <div className={styles.splitLayout}>
             <div>
               <p className={styles.eyebrow}>
-                What KB Folder Services Helps With
+                What Kenny's Folder Services Helps With
               </p>
               <h2>
                 Practical help for repair, training, maintenance, and support.
@@ -280,9 +280,9 @@ export default function AboutPage() {
               Folder machines, bindery equipment, and print finishing systems.
             </h2>
             <p>
-              KB Folder Services supports print shops, binderies, mail houses,
-              and production teams working with a range of folding and finishing
-              equipment.
+              Kenny's Folder Services supports print shops, binderies, mail
+              houses, and production teams working with a range of folding and
+              finishing equipment.
             </p>
           </div>
 
@@ -316,8 +316,8 @@ export default function AboutPage() {
           <p>
             Whether you are dealing with jams, misfeeds, worn parts,
             inconsistent folds, glue system issues, wet scoring, maintenance, or
-            operator training, KB Folder Services can help you figure out the
-            next step.
+            operator training, Kenny's Folder Services can help you figure out
+            the next step.
           </p>
 
           <div className={styles.heroActions}>

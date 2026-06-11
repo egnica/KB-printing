@@ -11,7 +11,7 @@ const kennyImage =
 export const metadata = {
   title: `${businessInfo.name} | Folder Machine Repair & Bindery Equipment Service`,
   description:
-    "KB Folder Services provides folder machine repair, troubleshooting, training, preventive maintenance, parts support, and bindery equipment service for print shops, binderies, mail houses, and production teams.",
+    "Kenny's Folder Services provides folder machine repair, troubleshooting, training, preventive maintenance, parts support, and bindery equipment service for print shops, binderies, mail houses, and production teams.",
   alternates: {
     canonical: "/",
   },
@@ -27,14 +27,14 @@ export const metadata = {
         url: `${businessInfo.url}/opengraph-image`,
         width: 1200,
         height: 630,
-        alt: "KB Folder Services - Folder Machine Repair and Bindery Equipment Support",
+        alt: "Kenny's Folder Services - Folder Machine Repair and Bindery Equipment Support",
       },
     ],
   },
 };
 
 export default function Home() {
-  let company_name = "KB Folder Services";
+  let company_name = "Kenny's Folder Services";
 
   const todayYear = new Date().getFullYear();
   const startYear = 1980;
