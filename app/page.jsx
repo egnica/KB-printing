@@ -381,7 +381,7 @@ export default function Home() {
           </h2>
 
           <p>
-            {company_name}is based in Minnesota and can travel countrywide when
+            {company_name} is based in Minnesota and can travel countrywide when
             the customer is willing to cover travel.
           </p>
         </div>
